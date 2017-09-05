@@ -18,7 +18,7 @@ class BarChart01 implements ExampleChart<CategoryChart> {
     @Override
     public CategoryChart getChart() {
 
-        CategoryChart chart = new CategoryChartBuilder().width(800).height(600).title("Score Histogram").xAxisTitle("Score").yAxisTitle("Number").build();
+        CategoryChart chart = new CategoryChartBuilder().width(1200).height(1000).title("Score Histogram").xAxisTitle("Score").yAxisTitle("Number").build();
 
         chart.getStyler().setLegendPosition(Styler.LegendPosition.InsideNW);
         chart.getStyler().setHasAnnotations(true);
