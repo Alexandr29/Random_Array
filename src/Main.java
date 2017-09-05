@@ -1,23 +1,34 @@
 
 public class Main {
+    private double[] myArr = new double[100];
+    private double[] myArr2 = new double[100];
+    private int counter = 100;
 
-    public static void main(String[] args) {
 
-        MyFrame myFrame = new MyFrame();
-
-        int[] myArr = new int[100];
-        int counter = 100;
-
-        for (int i = 0; i < counter; i++) {
-            int myRandom = (int)(Math.random()*100);
+    public double[] getMyArr() {
+        for (int i = 0; i < getCounter(); i++) {
+            int myRandom = (int) (Math.random() * 100);
             myArr[myRandom]++;
         }
-
-        for (int i = 0; i < myArr.length; i++) {
-            System.out.print((i+1)+"-ая ячейка "+myArr[i] + "; ");
+        return myArr;
+    }
+    public double[] getMyArr2() {
+        for (int i = 0; i < myArr2.length; i++) {
+            myArr2[i] = myArr[i];
         }
-        System.out.println();
+        return myArr2;
+    }
+    public int getCounter() {
+        return counter;
     }
 
+
+    public static void main(String[] args) {
+        MyFrame myFrame = new MyFrame();
+        myFrame.showFrame();
+        BarChart01 barChart01 = new BarChart01();
+
+        barChart01.showChart();
+    }
 
 }

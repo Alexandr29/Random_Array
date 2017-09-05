@@ -1,7 +1,3 @@
-import org.knowm.xchart.QuickChart;
-import org.knowm.xchart.SwingWrapper;
-import org.knowm.xchart.XYChart;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -23,14 +19,16 @@ public class MyFrame extends JFrame {
         getContentPane().add(jTextField);
         getContentPane().add(jButtonStart);
         getContentPane().add(jButtonStop);
-
-        setVisible(true);
     }
 
     private JTextField jTextField;
     private JButton jButtonStart;
     private JButton jButtonStop;
 
+
+    public void showFrame(){
+       setVisible(true);
+    }
     public int getjTextField(){
         int val = Integer.parseInt(jTextField.getText());
         return val;
@@ -43,6 +41,5 @@ public class MyFrame extends JFrame {
             System.out.println(getjTextField());
         }
     }
-
 
 }
