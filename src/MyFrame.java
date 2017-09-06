@@ -19,18 +19,19 @@ public class MyFrame extends JFrame {
         getContentPane().add(jTextField);
         getContentPane().add(jButtonStart);
         getContentPane().add(jButtonStop);
+
+        setVisible(true);
     }
 
     private JTextField jTextField;
     private JButton jButtonStart;
     private JButton jButtonStop;
 
-
-    public void showFrame(){
-       setVisible(true);
-    }
     public int getjTextField(){
-        int val = Integer.parseInt(jTextField.getText());
+        int val = 0;
+        try{
+             val = Integer.parseInt(jTextField.getText());
+        }catch (NumberFormatException ex){}
         return val;
     }
 
