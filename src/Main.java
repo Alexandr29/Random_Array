@@ -26,9 +26,9 @@ public class Main {
     public static void main(String[] args) {
         MyFrame myFrame = new MyFrame();
         myFrame.showFrame();
-        BarChart01 barChart01 = new BarChart01();
+        MyBarChart myBarChart = new MyBarChart();
 
-        barChart01.showChart();
+        myBarChart.showChart();
     }
 
 }
